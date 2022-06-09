@@ -1,9 +1,12 @@
 ﻿<Application x:Class="TestTaskDeeplay_C.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm ="clr-namespace:TestTaskDeeplay_C.ViewModels"
              xmlns:local="clr-namespace:TestTaskDeeplay_C"
              StartupUri="Views/Windows/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <vm:ViewModelLocatr x:Key="Locatr"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
