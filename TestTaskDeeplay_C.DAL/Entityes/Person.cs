@@ -2,13 +2,13 @@
 
 namespace TestTaskDeeplay_C.DAL.Entityes
 {
-    public abstract class Person : NamedEntity
+    public class Person : NamedEntity
     {
         public string SureName { get; set; }
 
         public string Patronymic { get; set; }
 
-        public DateTime DateTime { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         public Gender Gender { get; set; }
 

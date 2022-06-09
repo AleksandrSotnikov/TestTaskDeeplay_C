@@ -2,8 +2,7 @@
 
 namespace TestTaskDeeplay_C.DAL.Entityes
 {
-    public abstract class Gender : NamedEntity
+    public class Gender : NamedEntity
     {
-        public virtual ICollection<Person> People { get; set; }
     }
 }

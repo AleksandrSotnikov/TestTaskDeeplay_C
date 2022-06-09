@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Windows;
+using TestTaskDeeplay_C.Data;
 using TestTaskDeeplay_C.Services;
 using TestTaskDeeplay_C.ViewModels;
 
@@ -21,6 +22,7 @@ namespace TestTaskDeeplay_C
         public static IServiceProvider Servies => Host.Services;
 
         internal static void ConfigureServices(HostBuilderContext host, IServiceCollection services) => services
+            .AddDatabase(host.Configuration.GetSection("Database"))
             .AddServices()
             .AddViewModels();
         
