@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestTaskDeeplay_C.ViewModels
 {
-    internal class MainWIndowViewModel : ViewModel
+    internal class MainWindowViewModel : ViewModel
     {
         #region Title: String - Заголовок
 

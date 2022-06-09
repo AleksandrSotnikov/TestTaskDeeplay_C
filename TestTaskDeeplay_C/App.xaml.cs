@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Windows;
+using TestTaskDeeplay_C.Services;
+using TestTaskDeeplay_C.ViewModels;
 
 namespace TestTaskDeeplay_C
 {
@@ -18,10 +20,10 @@ namespace TestTaskDeeplay_C
 
         public static IServiceProvider Servies => Host.Services;
 
-        internal static void ConfigureServices(HostBuilderContext host, IServiceCollection services)
-        {
-            
-        }
+        internal static void ConfigureServices(HostBuilderContext host, IServiceCollection services) => services
+            .AddServices()
+            .AddViewModels();
+        
 
         protected override async void OnStartup(StartupEventArgs e)
         {
