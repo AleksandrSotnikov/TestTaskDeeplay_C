@@ -20,4 +20,5 @@
         <Setter Property="VerticalGridLinesBrush" Value="Black"></Setter>
         <Setter Property="HeadersVisibility" Value="Column"></Setter>
     </Style>
+
 </ResourceDictionary>

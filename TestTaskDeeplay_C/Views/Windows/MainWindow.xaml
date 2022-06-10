@@ -17,9 +17,6 @@
         <Menu IsMainMenu="True">
             <MenuItem Header="Сотрудники" Command="{Binding ShowMainViewCommand}"></MenuItem>
         </Menu>
-        <StatusBar>
-            <StatusBarItem>тест</StatusBarItem>
-        </StatusBar>
         <Grid>
             <Grid.Resources>
                 <ResourceDictionary>

@@ -9,6 +9,7 @@ namespace TestTaskDeeplay_C.Data
 {
     static class DBRegistrator
     {
+        #region Подключение к БД
         public static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration Configuration) => services
             .AddDbContext<TestTaskDB>(opt =>
             {
@@ -21,16 +22,18 @@ namespace TestTaskDeeplay_C.Data
                     case "MSSQL":
                         opt.UseSqlServer(Configuration.GetConnectionString(type));
                         break;
-                    case "SQLite":
-                        opt.UseSqlite(Configuration.GetConnectionString(type));
-                        break;
-                    case "InMemory":
-                        opt.UseInMemoryDatabase("TestTask.db");
-                        break;
+                        //case "SQLite":
+                        //    opt.UseSqlite(Configuration.GetConnectionString(type));
+                        //    break;
+                        //case "InMemory":
+                        //    opt.UseInMemoryDatabase("TestTask.db");
+                        //    break;
                 }
             }
             )
             .AddTransient<DbInitializer>()
             .AddRepositoryesInDB();
+        #endregion
     }
+
 }

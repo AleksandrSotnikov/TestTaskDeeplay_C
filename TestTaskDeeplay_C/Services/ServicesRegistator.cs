@@ -1,14 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TestTaskDeeplay_C.Service;
+using TestTaskDeeplay_C.Service.Interfaces;
 
 namespace TestTaskDeeplay_C.Services
 {
     static class ServicesRegistator
     {
-        public static IServiceCollection AddServices(this IServiceCollection services) => services;
+        public static IServiceCollection AddServices(this IServiceCollection services) => services
+            .AddTransient<IUserDialog, UserDialogService>();
     }
 }

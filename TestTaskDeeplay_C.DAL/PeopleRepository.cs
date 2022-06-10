@@ -7,9 +7,10 @@ namespace TestTaskDeeplay_C.DAL
 {
     class PeopleRepository : DbRepository<Person>
     {
-        public override IQueryable<Person> Items => base.Items.Include(item => item.Position).Include(item=> item.Gender).Include(item=> item.Departament);
+        public override IQueryable<Person> Items => base.Items.Include(item => item.Position).Include(item => item.Gender).Include(item => item.Departament);
         public PeopleRepository(TestTaskDB db) : base(db)
         {
+
         }
     }
 }
