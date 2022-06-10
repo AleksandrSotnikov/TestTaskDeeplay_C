@@ -14,6 +14,7 @@ namespace TestTaskDeeplay_C.ViewModels
     internal class MainWindowViewModel : ViewModel
     {
         private readonly IRepository<Person> _PersonRepo;
+        private readonly IRepository<Position> _PositionRepo;
         private readonly IRepository<Departament> _DepartamentRepo;
         
         #region Title: String - Заголовок
@@ -30,38 +31,26 @@ namespace TestTaskDeeplay_C.ViewModels
 
         #endregion
 
-        #region ICommand: _ShowDepartamentViewCommand - Модель представления
+        #region ICommand: _ShowMainViewCommand - Модель представления
 
-        private ICommand _ShowDepartamentViewCommand;
-        public ICommand ShowDepartamentViewCommand => _ShowDepartamentViewCommand
-            ??= new LambdaCommand(OnShowDepartamentViewCommandExecuted, CanShowDepartamentViewCommandExecute);
+        private ICommand _ShowMainViewCommand;
+        public ICommand ShowMainViewCommand => _ShowMainViewCommand
+            ??= new LambdaCommand(OnShowMainViewCommandExecuted, CanShowMainViewCommandExecute);
 
-        private bool CanShowDepartamentViewCommandExecute() => true;
+        private bool CanShowMainViewCommandExecute() => true;
 
-        private void OnShowDepartamentViewCommandExecuted() {
-            CurrentModel = new DepartamentViewModel(_DepartamentRepo);
+        private void OnShowMainViewCommandExecuted() {
+            CurrentModel = new MainViewModel(_DepartamentRepo,_PersonRepo,_PositionRepo);
         }
 
         #endregion
 
-        #region ICommand: _ShowPersonViewCommand - Модель представления
-
-        private ICommand _ShowPersonViewCommand;
-        public ICommand ShowPersonViewCommand => _ShowPersonViewCommand
-            ??= new LambdaCommand(OnShowPersonViewCommandExecuted, CanShowPersonViewCommandExecute);
-
-        private bool CanShowPersonViewCommandExecute() => true;
-
-        private void OnShowPersonViewCommandExecuted() {
-            CurrentModel = new PersonViewModel(_PersonRepo);
+        public MainWindowViewModel(IRepository<Person> person,IRepository<Departament> departament, IRepository<Position> positionRepo)
+        {
+            _PersonRepo = person;
+            _DepartamentRepo = departament;
+            _PositionRepo = positionRepo;
         }
-
-        #endregion
-        //public MainWindowViewModel(IRepository<Person> repository)
-        //{
-        //    _PersonRepo = repository;
-        //    var person = _PersonRepo.Items.Take(10).ToArray();
-        //}
 
     }
 }

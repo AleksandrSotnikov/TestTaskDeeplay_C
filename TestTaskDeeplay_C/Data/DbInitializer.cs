@@ -25,7 +25,7 @@ namespace TestTaskDeeplay_C.Data
         public async Task InitializeAsync()
         {
 
-            await _db.Database.EnsureDeletedAsync().ConfigureAwait(false);
+            //await _db.Database.EnsureDeletedAsync().ConfigureAwait(false);
 
             await _db.Database.MigrateAsync().ConfigureAwait(false);
 
@@ -47,7 +47,7 @@ namespace TestTaskDeeplay_C.Data
             _Departaments.Add(new Departament { Name = "Архив" });
             _Departaments.Add(new Departament { Name = "Производство" });
             _Departaments.Add(new Departament { Name = "Столовая" });
-            _Departaments.Add(new Departament { Name = "Производство" });
+            _Departaments.Add(new Departament { Name = "IT" });
             await _db.Departaments.AddRangeAsync(_Departaments);
             await _db.SaveChangesAsync();
         }
