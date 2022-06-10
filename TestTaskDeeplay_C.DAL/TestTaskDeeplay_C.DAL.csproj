@@ -12,4 +12,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TestTaskDeeplay_C.Interfaces\TestTaskDeeplay_C.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
