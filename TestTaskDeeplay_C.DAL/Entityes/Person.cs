@@ -13,7 +13,7 @@ namespace TestTaskDeeplay_C.DAL.Entityes
         public Gender Gender { get; set; }
 
         public Position Position { get; set; }
-
-        public Departament Departament { get; set; }
+   
+        public Departament Departament { get; set; } 
     }
 }

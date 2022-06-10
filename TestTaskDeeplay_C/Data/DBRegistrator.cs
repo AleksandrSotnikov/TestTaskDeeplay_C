@@ -28,6 +28,6 @@ namespace TestTaskDeeplay_C.Data
                         break;
                 }
             }
-            );
+            ).AddTransient<DbInitializer>();
     }
 }

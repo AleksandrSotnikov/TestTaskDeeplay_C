@@ -6,5 +6,6 @@ namespace TestTaskDeeplay_C.DAL.Entityes.Base
     {
         [Required]
         public string Name { get;set; }
+
     }
 }
