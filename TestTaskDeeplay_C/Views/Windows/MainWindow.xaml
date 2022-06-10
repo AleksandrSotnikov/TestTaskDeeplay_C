@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestTaskDeeplay_C"
         DataContext="{Binding MainWindowModel, Source={StaticResource Locator}}"
-        Title="{Binding Title}" Height="450" Width="800">
+        Title="{Binding Title}" 
+        Height="450"
+        Width="800">
     <Grid>
+        <Menu>
+            <MenuItem Header="Сотрудники"></MenuItem>
+            <MenuItem Header="Подразделения"></MenuItem>
+        </Menu>
 
+        <Grid>
+            
+        </Grid>
+
+        <StatusBar>
+            <StatusBarItem></StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>

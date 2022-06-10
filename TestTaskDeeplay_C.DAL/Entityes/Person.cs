@@ -7,8 +7,10 @@ namespace TestTaskDeeplay_C.DAL.Entityes
         public string SureName { get; set; }
         public string Patronymic { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public Gender Gender { get; set; }
-        public Position Position { get; set; }   
-        public Departament Departament { get; set; } 
+        public virtual Gender Gender { get; set; }
+        public virtual Position Position { get; set; }   
+        public virtual Departament Departament { get; set; } 
+
+         
     }
 }

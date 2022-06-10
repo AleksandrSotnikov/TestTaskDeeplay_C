@@ -11,7 +11,7 @@ using TestTaskDeeplay_C.Interfaces;
 
 namespace TestTaskDeeplay_C.DAL
 {
-    class DbRepository<T> : IRepository<T> where T : Entity, new()
+    internal class DbRepository<T> : IRepository<T> where T : Entity, new()
     {
 
         private readonly TestTaskDB _db;

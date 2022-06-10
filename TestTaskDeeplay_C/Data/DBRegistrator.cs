@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using TestTaskDeeplay_C.DAL;
 using TestTaskDeeplay_C.DAL.Context;
 
 namespace TestTaskDeeplay_C.Data
@@ -28,6 +29,8 @@ namespace TestTaskDeeplay_C.Data
                         break;
                 }
             }
-            ).AddTransient<DbInitializer>();
+            )
+            .AddTransient<DbInitializer>()
+            .AddRepositoryesInDB();
     }
 }
